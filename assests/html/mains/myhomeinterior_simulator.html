@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>3D 마이홈인테리어 - 시뮬레이터</title>
+        <link rel="stylesheet" href="../../html_dialog/class_btn.css">
+        <script type="text/javascript" src="../../html_dialog/toggle_hide_box.js"></script>
+    </head>
+    <body>
+        <div id="contents_wrapper" style="position:fixed; top:0px; left:0px; width:100%;">
+            <div style="position:absolute; top:0px; left:0px; background-color: #cdcdcd; padding:0px 50px;">
+                <img src="../..//html_dialog/main_logo.png" alt="" style="width:400px; vertical-align: middle; padding-bottom:2px;">
+                <button class="btn" onclick="window.location.href = 'myhomeinterior_main.html'">메인화면으로 돌아가기 </button>
+                <button class="btn" onclick="window.location.href = 'myhomeinterior_management.html'"> 나만의 설계도 관리하기 </button>
+                <div style="display:inline-block;">
+                    <div>
+                        <button class="btn showbutton" onmouseover="toggle('menu_btn3')" onmouseout="hide('menu_btn3')" onclick=""> 집 설계도 매니저 </button>
+                    </div>
+                    <div style="position:relative;">
+                        <div style="position:absolute; top:0px; left:-10px; background-color: #cdcdcd; border-radius: 7px; padding:10px;">
+                            <div id="menu_btn3" style="display:none; ">
+                                <button id="btn">나만의 집 설계도 정보</button>
+                                <div><button id="btn">집 설계도 파일 제작하기</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:inline-block">
+                    <div>
+                        <button class="btn showbutton" onmouseover="toggle('menu_btn4')" onmouseout="hide('menu_btn4')" class="btn" onclick=""> 커뮤니티 </button> 
+                    </div>
+                    <div style="position:relative;">
+                        <div style="position:absolute; top:0px; left:-10px; background-color: #cdcdcd; border-radius: 7px; padding:10px;">
+                            <div id="menu_btn4" style="display:none; ">
+                                <button id="btn">설계도 시뮬레이션 꿀팁</button>
+                                <div><button id="btn" >도움말</button></div>
+                                <div><button id="btn">FAQ</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position:absolute; top:0px; right:0px; padding-right:50px; padding-top:10px;">
+                <img src="../..//html_dialog/img_not_logined_profile_image.png" width="50" height="50" style="vertical-align:sub; margin-bottom:-10px; margin-left:250px; margin-right:14px">
+                <button class="btn" style="font-weight:lighter; width:150px; margin-right:15px">로그인하기</button>
+            </div>
+        </div>
+        <div style="margin-top: 70px;">
+        </div>
+    </body>
+</html>

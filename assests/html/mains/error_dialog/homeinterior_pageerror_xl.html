@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>로그인이 필요합니다. - 마이홈인테리어</title>
+        <style>
+            html, body {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            .error1{
+                font-size:40px;
+                font-weight:bolder;
+                color:#ffffff;
+                text-align: center;
+            }
+            .btn {
+                    background-color: #ededed;
+                    border: 2px solid #dddddd;
+                    color: #000000;
+                    font-weight: bolder;
+                    font-size: 30px;
+                    border-radius: 70px;
+                    margin: 3px;
+                    width: 480px;
+                    
+            }
+            .btn:hover {
+                transition-duration: 0.2s;
+                background-color: #0099ff;
+                color: #ffffff;
+                border-color: #0077cc;
+            }
+
+            .mainbtn {
+                background-color: #bcbcbc;
+                border: 2px solid #999999;
+                color: #000000;
+                font-weight: bolder;
+                font-size: 30px;
+                border-radius: 70px;
+                margin: 5px 3px;
+                width: 480px;
+            }
+            .mainbtn:hover {
+                transition-duration: 0.2s;
+                background-color: #0099ff;
+                color: #ffffff;
+                border-color: #0077cc;
+            }
+
+            .mainbtn_changecolor{
+                transition-duration: 0.2s;
+                background-color: #CE0500;
+                color: #ffffff;
+                border-color: #770300;
+            }
+
+        </style>
+        <script>
+        function showmsg(tf) {
+            if( tf == "true" ){
+                window.alert("'확인' 버튼을 누르면\n자동으로 2초 후 메인화면으로 이동합니다.");
+                returnpage();
+
+            }else{
+                window.alert("오류로 인하여 해당 작업을 실행할 수 없습니다.\n페이지를 새로고침 후 다시 시도해 주세요.");
+            }
+        }
+
+        function changecolor(){
+            document.querySelector("#gomainbtn").classList.add("mainbtn_changecolor");
+        }
+
+        function returnpage(){
+            document.querySelector("#gomainbtn").innerHTML = "('메인화면으로 돌아가기' 선택됨)";
+            changecolor();
+            setTimeout(function (){
+                window.location.href = "../myhomeinterior_main.html";
+            }, 1000)
+        }
+        </script>
+    </head>
+    <body>
+        <div style="border-color: #787878;">
+          <div style="text-align : center; background-color: #cdcdcd; margin-bottom: 100px"><img src="../../../html_dialog/main_logo.png" width="500"></div>
+            <div style="border: #dddddd solid; border-width: 3px; border-radius: 10px; width: 1200; background-color: #f7f7f7; margin: 0 auto;">
+              <div style="text-align: center;">
+                  <h1 class="error1" style="background-color: #0067fc; border: #0033da solid; width: 1000px; border-radius: 70px; margin: 100 auto 0">현재 이용하시려는 기능은 로그인이 필요합니다.</h1>
+              </div>
+         <div style="color: #999999; font: size 10px; text-align: center; margin-top: 40px">이 기능은 로그인을 하셔야 이용할 수 있습니다.</div>
+         <div style="color: #999999; font: size 10px; text-align: center; margin-bottom: 200px">'지금 로그인하기'를 눌러 마이홈인테리어에 로그인 후에 이용해주세요.</div>
+                <div style="text-align: center;">
+                    <button id="gomainbtn" class="mainbtn" onclick="showmsg('true');" style="margin-right:15px; margin-top:50px; display:inline-block;">메인화면으로 돌아가기</button>
+                    <button class="btn" style="display:inline-block; margin-bottom: 100px;" onclick="window.location.href = '../myhomeinterior_login_step1.html'">지금 로그인하기</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
